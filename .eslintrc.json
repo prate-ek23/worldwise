@@ -1,0 +1,10 @@
+{
+  "extends": "react-app",
+
+  "rules": {
+    "react/prop-types": "off", // Turns off prop-types validation
+    "no-unused-vars": "warn", // Changes unused variables from error to warning
+    "no-console": "warn", // Allows console logs with a warning
+    "react/jsx-props-no-spreading": "off" // Allows JSX prop spreading without warnings
+  }
+}
