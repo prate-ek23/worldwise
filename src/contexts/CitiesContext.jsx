@@ -2,7 +2,8 @@ import { useCallback } from 'react';
 import { useContext, useReducer } from 'react';
 import { useState, useEffect, createContext } from 'react';
 
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://worldswise-server.onrender.com';
+// const BASE_URL = 'http://localhost:8000';
 
 const CitiesContext = createContext();
 
@@ -80,6 +81,7 @@ function CitiesProvider({ children }) {
 
       try {
         const res = await fetch(`${BASE_URL}/cities`);
+        // const res = await fetch("/.netlify/functions/server")
         const data = await res.json();
 
         dispatch({ type: 'cities/loaded', payload: data });
